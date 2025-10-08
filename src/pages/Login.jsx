@@ -1,6 +1,7 @@
 import React from 'react';
 import { assets } from '../assets/assets';
 import { Star } from 'lucide-react';
+import {SignIn} from '@clerk/clerk-react'
 
 const Login = () => {
   return (
@@ -25,6 +26,10 @@ const Login = () => {
             <p className='text-xl md:text-3xl text-indigo-900 max-w-72'>connect with global community on socian</p>
         </div>
         <span className='md:h-10'></span>
+      </div>
+      { /* Right side: Login Form */}
+      <div className='flex-1 flex items-center justify-center p-6 sm:p-10' >
+        <SignIn />
       </div>
     </div>
   );
