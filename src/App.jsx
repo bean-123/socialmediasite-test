@@ -1,10 +1,30 @@
 import React from 'react'
+import Login from './pages/Login'
+import { Route, Routes } from 'react-router-dom'
+import Feed from './pages/Feed'
+import Messages from './pages/Messages'
+import ChatBox from './pages/Chatbox'
+import Connections from './pages/Connections'
+import Discover from './pages/Discover'
+import Profile from './pages/Profile'
+import CreatePost from './pages/CreatePost'
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Login />}>
+        <Route index element={<Feed />} />
+        <Route path='messages' element={<Messages />}></Route>
+        <Route path='messages/:userId' element={<ChatBox />}></Route>
+        <Route path='connections' element={<Connections />}></Route>
+        <Route path='discover' element={<Discover />}></Route>
+        <Route path='profile' element={<Profile />}></Route>
+        <Route path='profile/:profileId' element={<Profile />}></Route>
+        <Route path='create-post' element={<CreatePost />}></Route>
+        </Route>
+      </Routes>
+    </>
   )
 }
 
